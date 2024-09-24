@@ -33,6 +33,7 @@ module.exports = function(){
     );
     //! Eliminar productos
     router.delete('/productos/:id', productosController.eliminarProducto);
+    router.post('/productos/busqueda/:query', productosController.buscarProductos)
     //** PEDIDOS */
     //! Nuevo Pedido
     router.post('/pedidos', pedidosControler.nuevoPedido)

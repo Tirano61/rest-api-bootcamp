@@ -1,5 +1,4 @@
-const Clientes = require("../models/Clientes")
-const Productos = require("../models/Productos")
+
 const Pedidos = require("../models/Pedidos")
 
 
