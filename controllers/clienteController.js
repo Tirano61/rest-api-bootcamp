@@ -9,11 +9,25 @@ exports.nuevoCliente = async (req, res, next)=>{
     try {
         //! Almacenar el registro
         await cliente.save();
-        res.json({ mensaje: 'Se agregó un nuevo cliente !!!'})
+        res.json({ 
+            type: 'ok',
+            mensaje: 'Se agregó un nuevo cliente !!!'
+        });
     } catch (error) {
         //! Si hay un error
-        console.log(error);
-        next();
+        if(error.code === 11000){
+            res.json({
+                type: 'error',
+                mensaje: 'Ese cliente ya está registrado'
+            });
+            next();
+        }else{
+            res.json({
+                type: 'error',
+                mensaje: 'No se pudo insertar un nuevo cliente'
+            });
+            next();
+        }
     }
 }
 //! Mostrar todos los clientes
@@ -24,7 +38,10 @@ exports.mostrarClientes = async (req, res, next) =>{
             clientes,
         });
     } catch (error) {
-        console.log(error);
+        res.json({
+            type: 'error',
+            mensaje: 'No se pudo insertar un nuevo cliente'
+        });
         next();
     }
 
@@ -37,28 +54,38 @@ exports.mostrarCliente = async (req,res, next) =>{
 
         if(!cliente){
             res.json({
+                type: 'error',
                 mensaje: 'El cliente no existe' 
             })
-            next();
+            return next();
         }
         res.json({
+            type: 'ok',
             cliente
         })
     } catch (error) {
-        console.log(error);
+        res.json({
+            type: 'error',
+            mensaje: 'No se pudo encontrar el cliente'
+        });
         next();
     }
 }
 
-exports.actualizarCliente = async(req, resizeBy, next) =>{
+exports.actualizarCliente = async(req, res, next) =>{
     try {
         const cliente = await Clientes.findOneAndUpdate( {_id : req.params.id}, req.body, {new: true} );
         
-        resizeBy.json(cliente);
+        res.json({
+            type: 'ok',
+            mensaje: 'Los datos se han cambiado correctamente',
+            cliente
+        });
 
     } catch (error) {
         console.log(error);
         res.json({
+            type: 'error',
             mensaje: 'No se pudo actualizar'
         })
         next();
