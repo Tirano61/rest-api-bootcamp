@@ -3,6 +3,7 @@ const router = express.Router();
 const clienteController = require('../controllers/clienteController');
 const productosController = require('../controllers/productosController');
 const pedidosControler = require('../controllers/pedidosControler');
+const usuariosController = require("../controllers/usuariosController");
 
 
 module.exports = function(){
@@ -45,6 +46,11 @@ module.exports = function(){
     router.put('/pedidos/:id', pedidosControler.actualizarPedido);
     //! Elimina un pedido
     router.delete('/pedidos/:id', pedidosControler.eliminarPedido);
+
+    //! usuarios
+    router.post('/crear-cuenta', usuariosController.registrarUsuario);
+    router.post('/iniciar-sesion', usuariosController.autenticarUsuario);
+
 
 
     return router;
