@@ -36,7 +36,7 @@ module.exports = function(){
     router.post('/productos/busqueda/:query', productosController.buscarProductos)
     //** PEDIDOS */
     //! Nuevo Pedido
-    router.post('/pedidos', pedidosControler.nuevoPedido)
+    router.post('/pedidos/nuevo/:idCliente', pedidosControler.nuevoPedido)
     //! Mostrar todos los pedidos
     router.get('/pedidos', pedidosControler.mostrarPedidos);
     //! Mostrar pedido por id
