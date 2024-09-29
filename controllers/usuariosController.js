@@ -34,7 +34,7 @@ exports.autenticarUsuario =async (req, res, next) =>{
                 email: usuario.email,
                 nombre: usuario.nombre,
                 id: usuario._id
-            }, 'LLAVESECRETA',{
+            }, process.env.SECRET,{
                 expiresIn: '1h'
             });
             //! Retornar el token

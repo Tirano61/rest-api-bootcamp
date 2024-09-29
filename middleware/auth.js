@@ -14,7 +14,7 @@ module.exports = (req, res, next) =>{
     const token = authHeader.split(' ')[1]; 
     let revisarToken;
     try {
-        revisarToken = jwt.verify(token, 'LLAVESECRETA' );
+        revisarToken = jwt.verify(token, process.env.SECRET );
 
     } catch (error) {
         error.statusCode = 500;
