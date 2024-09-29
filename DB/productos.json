@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "66ea1456b7c3f0766a10c6e7"
+  },
+  "nombre": "Remera React",
+  "precio": 3600,
+  "imagen": "XDGYuwdUv.jpeg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66f03342b11cd29d6053f9ce"
+  },
+  "nombre": "Remera Logo Vuejs",
+  "precio": 4800,
+  "imagen": "f2V7sD_0S.jpeg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66f0342db11cd29d6053f9d0"
+  },
+  "nombre": "Remera Logo Sass",
+  "precio": 4800,
+  "imagen": "RNwvZTBM0.jpeg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66f03465b11cd29d60540900"
+  },
+  "nombre": "Remera Logo Angular",
+  "precio": 3500,
+  "imagen": "v497uOyOf.jpeg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66f06713b11cd29d60569918"
+  },
+  "nombre": "Remera Logo GitHub",
+  "precio": 5200,
+  "imagen": "5aKAAyw9J.jpeg",
+  "__v": 0
+}]

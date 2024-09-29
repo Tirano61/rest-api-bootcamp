@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "66e8c16e995514717a97576f"
+  },
+  "nombre": "Carlos Ernesto",
+  "apellido": "juarez del Carrillo",
+  "empresa": "Cartonero",
+  "email": "correo@correo.com",
+  "telefono": "3425323556",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e8c83d16f73cb59140eb3c"
+  },
+  "nombre": "Esteban",
+  "apellido": "Gutierrez",
+  "empresa": "AirBNB",
+  "email": "correo2@correo.com",
+  "telefono": "3425323556",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eedc80521397d2c3b112c1"
+  },
+  "nombre": "Diego",
+  "apellido": "Ramirez",
+  "empresa": "Coder House",
+  "email": "diego@gmail.com",
+  "telefono": "34626373829",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66f04096b11cd29d605698fd"
+  },
+  "nombre": "Carlos Ernesto",
+  "apellido": "juarez del Carrillo",
+  "empresa": "No tengo",
+  "email": "diego@eustaquio.com",
+  "telefono": "23342235356345",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66f04124b11cd29d60569907"
+  },
+  "nombre": "Diego Carlos1",
+  "apellido": "Juarez",
+  "empresa": "Vuejs",
+  "email": "cliente@cliente.com",
+  "telefono": "12837135123",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66f04183b11cd29d60569912"
+  },
+  "nombre": "Carlos Ernesto Diego",
+  "apellido": "Juarez Tomillo",
+  "empresa": "Angular",
+  "email": "deste@aca.com",
+  "telefono": "12276341237",
+  "__v": 0
+}]
